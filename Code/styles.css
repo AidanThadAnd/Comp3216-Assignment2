@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    padding-bottom:3%; /* Gives footer room at bottom of page */
+}
+
+/* Styling for Nav bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: left;
+}
+
+nav ul li {
+    padding-top:2.4%;
+    margin: 0 30px;
+    font-size: larger;
+}
+nav ul img{
+    padding-top:2px;
+    padding-left:2px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #51279B;
+    font-size:larger;
+}
+
+nav ul li a:hover{
+    color: #8662C7;
+}
+
+#logo{
+
+    max-width: 6%;
+    max-height: 6%;
+
+}
+
+/*Styling for introduction content such as the background + learn more button */
+.introduction{
+    background-image: url("../images/florence.jpg");
+    background-size: cover;
+    padding-bottom:7%;
+}
+
+.introduction main li {
+    list-style: none;
+    padding-top: 8%;
+    padding-left: 8%;
+    color:white;
+}
+
+.introduction main li h1{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.introduction main li p{
+    font-size: 24px;
+    
+}
+
+.introduction main li button{
+    background-color: #51279B;
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.introduction main li button:hover{
+    color: #8662C7;
+}
+
+/* Styling for web cards*/
+.places-to-visit{
+    background-color: #f4f4f4;
+}
+.places-to-visit ul{
+    list-style:none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1,auto);
+    justify-content: center;
+    justify-items: center;
+    padding: 0;
+}
+
+.places-to-visit ul li{
+    background-color: white;
+    padding:10px;
+}
+
+.places-to-visit ul li h2{
+    font-size: 16px; /* Font not to spec but 14px and subsequent smaller font size looked freakishly small on my browser */
+    font-weight:normal;
+    padding-bottom: 0;
+    margin-top:2px;
+    margin-bottom:0px;
+    padding-left:5px;
+}
+
+.places-to-visit #description{
+    font-size: 14px;
+    padding-left:5px;
+    margin-top:4px;
+    margin-bottom:2px;
+}
+
+
+.likes, .comments{
+    display:inline;
+    font-size: 12px;
+    padding-left:10px;
+}
+
+.likes{
+    padding-right: 5px;
+}
+
+.likes img, .comments img{
+    max-width:4%;
+    max-height:4%;
+    padding:0 1% 1% 1%;
+    transform:translateY(6px);
+}
+
+
+/* Styling for footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1% 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 1em;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover{
+    color:grey;
+}
