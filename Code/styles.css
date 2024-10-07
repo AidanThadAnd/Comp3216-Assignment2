@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #dadada;
     padding-bottom:3%; /* Gives footer room at bottom of page */
 }
 
@@ -79,39 +79,49 @@ nav ul li a:hover{
     color: #8662C7;
 }
 
+
 /* Styling for web cards*/
-.places-to-visit{
-    background-color: #f4f4f4;
+
+.places-to-visit {
+    padding: 20px; 
+    max-width: 1000px; /* Container was expanding to width of the browswer so a limit is set */
+    margin: 0 auto; 
 }
-.places-to-visit ul{
-    list-style:none;
+
+.places-to-visit ul {
+    list-style: none;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1,auto);
-    justify-content: center;
-    justify-items: center;
+    grid-gap: 10px; 
     padding: 0;
+    margin: 0; 
 }
 
-.places-to-visit ul li{
-    background-color: white;
-    padding:10px;
+.places-to-visit ul li {
+    background-color: white; 
+    padding: 10px;
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); 
 }
 
-.places-to-visit ul li h2{
-    font-size: 16px; /* Font not to spec but 14px and subsequent smaller font size looked freakishly small on my browser */
-    font-weight:normal;
+.places-to-visit ul li h2 {
+    font-size: 16px;
+    font-weight: normal;
     padding-bottom: 0;
-    margin-top:2px;
-    margin-bottom:0px;
-    padding-left:5px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+    padding-left: 5px;
 }
 
-.places-to-visit #description{
+.places-to-visit ul li p {
+    margin: 0;
+}
+
+.places-to-visit #description {
     font-size: 14px;
-    padding-left:5px;
-    margin-top:4px;
-    margin-bottom:2px;
+    padding-left: 5px;
+    margin-top: 4px;
+    margin-bottom: 2px;
 }
 
 
@@ -126,11 +136,116 @@ nav ul li a:hover{
 }
 
 .likes img, .comments img{
-    max-width:4%;
-    max-height:4%;
+    max-width:15px;
+    max-height:15px;
     padding:0 1% 1% 1%;
     transform:translateY(6px);
 }
+
+
+/* Styling for web cards buttons*/
+.places-to-visit button{
+    background-color: #51279B;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.places-to-visit button h2{
+    margin-right:6px;
+}
+
+.places-to-visit button:hover{
+    color: #8662C7;
+}
+
+/* Styling for individual webcards */
+.individual-travel-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 800px; 
+}
+
+
+/* Adds border box and box shadow to each element, all included here so that it's easier to modify */
+#travel-page-main-photo,
+#travel-page-text-content,
+#related-images
+{
+    background-color: white;
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+#travel-page-main-photo {
+    max-width: 50%;
+    height: auto;
+    padding: 20px;
+}
+
+/* Alot of fine tuning to have likes and comments set the correct height for the background of the text content */
+#travel-page-text-content {
+    text-align: center;
+    list-style: none;
+    padding: 10px;
+    font-size: 14px;
+    max-height: 260px;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; 
+}
+
+.likes-comments {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 5px; 
+    padding: 0; 
+}
+
+/* ChatGPT suggested this to correct and margin/padding that likes-comments might have recieved from inheritance */
+.likes-comments > * {
+    margin: 0 5px; 
+    padding: 0; 
+}
+
+
+
+#related-images {
+    list-style:none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1,auto);
+    justify-content: center;
+    justify-items: center;
+    padding: 10px;
+    gap: 10px;
+
+}
+
+.individual-travel-page ul{
+    list-style:none;
+}
+
+
+
+#travel-page-text-content p {
+    display:inline;
+    font-size:24px;
+}
+
+
+
+
+
 
 
 /* Styling for footer */
@@ -142,6 +257,7 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+    
 }
 
 footer ul {
@@ -164,3 +280,4 @@ footer ul li a {
 footer ul li a:hover{
     color:grey;
 }
+
