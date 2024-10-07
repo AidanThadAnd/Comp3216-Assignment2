@@ -43,7 +43,7 @@ nav ul li a:hover{
 
 /*Styling for introduction content such as the background + learn more button */
 .introduction{
-    background-image: url(docs/assets/images/florence.jpg);
+    background-image: url(./docs/assets/images/florence.jpg);
     background-size: cover;
     padding-bottom:7%;
 }
